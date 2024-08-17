@@ -34,7 +34,7 @@ module.exports = {
       const categories = {};
       let msg = "";
 
-      msg += `[💬»𝗛𝗨𝗡𝗧𝗘𝗥]\n[(　・ω・)⊃-[二二]𝗟𝗜𝗦𝗧]\n┏━━━━━━━━━┓`// rep𝙡ace with your name 
+      msg += `[💬»𝗗𝗔𝗘𝗠𝗢𝗡]\n[(　・ω・)⊃-[二二]𝗟𝗜𝗦𝗧]\n┏━━━━━━━━━┓`// rep𝙡ace with your name 
 
       for (const [name, value] of commands) {
         if (value.config.role > 1 && role < value.config.role) continue;
@@ -58,7 +58,7 @@ const names = categories[category].commands.sort();
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑]\n\n 𝐏𝐇𝐀𝐑𝐎𝐔𝐊:\n[𝙂𝙤𝙖𝙩𝙗𝙤𝙩-𝙑𝟮]\n\n In any Request or Problem just type\ncallad]`;
+      msg += `\n\n🔖𝗧𝗢𝗧𝗔𝗟 𝗖𝗺𝗱 [${totalCommands}📑]\n\n 𝗚𝗛𝗢𝗦𝗧:\n[𝙂𝙤𝙖𝙩𝙗𝙤𝙩-𝙑𝟮]\n\n In any Request or Problem just type\ncallad]`;
       msg += ``;
       msg += ``; // its not decoy so change it if you want 
 
@@ -90,7 +90,7 @@ const names = categories[category].commands.sort();
         const guideBody = configCommand.guide?.en || "No guide available.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `𝗡𝗔𝗠𝗘\n────────────\n〉[ ${configCommand.name}]\[𝗜𝗡𝗙𝗢]\n--------------------------------------\n〉[𝘥𝘦𝘴𝘤𝘳𝘪𝘱𝘵𝘪𝘰𝘯]:\n▶︎${longDescription}\n〉🌐[𝘖𝘵𝘩𝘦𝘳-𝘯𝘢𝘮𝘦𝘴]:\n▶︎${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"} Other names in your group: Do not have\n〉[𝘝𝘦𝘳𝘴𝘪𝘰𝘯]:\n▶︎${configCommand.version || "1.0"}\n〉[𝘙𝘰𝘭𝘦]:\n▶︎${roleText}\n〉𝘛𝘪𝘮𝘦 𝘱𝘦𝘳 𝘤𝘰𝘮𝘮𝘢𝘯𝘥:\n ▶︎${configCommand.countDown || 1}s〉[𝘈𝘶𝘵𝘩𝘰𝘳]:\n▶︎${author}\𝗨𝗦𝗔𝗚𝗘\n────────────\n▶︎ ${usage}\n━━━━━━━━━━━━\n𝗛𝗨𝗡𝗧𝗘𝗥 𝗟𝗜𝗡𝗘»📑`;
+        const response = `𝗡𝗔𝗠𝗘\n────────────\n〉[ ${configCommand.name}]\[𝗜𝗡𝗙𝗢]\n--------------------------------------\n〉[𝘥𝘦𝘴𝘤𝘳𝘪𝘱𝘵𝘪𝘰𝘯]:\n▶︎${longDescription}\n〉🌐[𝘖𝘵𝘩𝘦𝘳-𝘯𝘢𝘮𝘦𝘴]:\n▶︎${configCommand.aliases ? configCommand.aliases.join(", ") : "Do not have"} Other names in your group: Do not have\n〉[𝘝𝘦𝘳𝘴𝘪𝘰𝘯]:\n▶︎${configCommand.version || "1.0"}\n〉[𝘙𝘰𝘭𝘦]:\n▶︎${roleText}\n〉𝘛𝘪𝘮𝘦 𝘱𝘦𝘳 𝘤𝘰𝘮𝘮𝘢𝘯𝘥:\n ▶︎${configCommand.countDown || 1}s〉[𝘈𝘶𝘵𝘩𝘰𝘳]:\n▶︎${author}\𝗨𝗦𝗔𝗚𝗘\n────────────\n▶︎ ${usage}\n━━━━━━━━━━━━\n𝗗𝗔𝗘𝗠𝗢𝗡 𝗟𝗜𝗡𝗘»📑`;
 
         await message.reply(response);
       }
